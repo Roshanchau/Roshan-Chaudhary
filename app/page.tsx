@@ -1,8 +1,10 @@
-import React from 'react'
+import Hero from "./components/hero"
 
 const page=()=> {
   return (
-    <div className=''>page</div>
+    <div className="flex-col items-center justify-center p-16 ml-20">
+      <Hero/>
+    </div>
   )
 }
 

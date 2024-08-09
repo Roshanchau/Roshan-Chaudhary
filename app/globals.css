@@ -4,9 +4,10 @@
 
 :root {
     background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
-    color: white;
+    color: rgba(249, 244, 244, 0.848);
     padding: 4%;
-
+    font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    
     --black-gradient: linear-gradient(
       144.39deg,
       #ffffff -278.56%,
