@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
     color: rgba(249, 244, 244, 0.848);
     padding: 4%;
     font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
@@ -20,6 +20,11 @@
   * {
     scroll-behavior: smooth;
   }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
   
   .text-gradient {
     background: radial-gradient(
