@@ -1,3 +1,6 @@
+import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <div className="flex-col items-center justify-center text-left p-10">
@@ -17,6 +20,12 @@ const Hero = () => {
           designing) exceptional digital experiences. Currently, I'm focused on
           building accessible, human-centered products.
         </p>
+
+        <div className="flex flex-row items-center mt-8 text-[rgb(204,214,246)] gap-3 cursor-pointer">
+          <p>See More About Me</p>
+          <Link href={`/About`}>
+          <span className="animate-move-arrow"><FaArrowRight /></span></Link>
+        </div>
     </div>
   );
 };

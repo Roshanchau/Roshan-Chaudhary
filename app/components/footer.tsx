@@ -4,7 +4,7 @@ import { FaGithub , FaLinkedin , FaTwitterSquare , FaInstagram } from "react-ico
 const Footer= ()=>{
     return (
         <Container>
-            <div className=" px-4 flex flex-row items-center mx-6 gap-6">
+            <div className=" px-4 flex flex-row items-center mx-6 gap-6 ml-[67px] ">
                 <FaGithub size={20}/>
                 <FaLinkedin size={20}/>
                 <FaTwitterSquare size={20}/>

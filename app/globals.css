@@ -91,3 +91,16 @@
     background: rgba(255, 255, 255, 0.6);
     filter: blur(750px);
   }
+
+  @keyframes move-arrow {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(0.40rem); /* Adjust this value to change the distance */
+    }
+  }
+  
+  .animate-move-arrow {
+    animation: move-arrow 1s infinite;
+  }

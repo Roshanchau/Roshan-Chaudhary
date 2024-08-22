@@ -5,15 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 interface MainNavProps{
-    data: String[];
+    label: string[];
 }
 
 const MainNav: React.FC<MainNavProps>=({
-    data
+    label
 })=>{
     const pathname= usePathname()
 
-    const routes= data.map((route)=>({
+    const routes= label.map((route)=>({
         label: route
     }))
 
@@ -24,7 +24,7 @@ const MainNav: React.FC<MainNavProps>=({
         {
             routes.map((route)=>(
                 <Link 
-                href={`/`}
+                href={`/${route.label}`}
                     className={cn(
                         "text-base font-medium  transition-colors hover:text-neutral-400"
                     )}
