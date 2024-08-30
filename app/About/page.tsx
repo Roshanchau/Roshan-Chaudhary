@@ -1,33 +1,69 @@
 import Image from "next/image";
 import photo from "../assets/photo.jpg";
+import { AiFillCaretRight } from "react-icons/ai";
 
 const About = () => {
   return (
     <div className="flex flex-col items-center justify-center p-2 ml-28">
+      <div className="grid grid-cols-2 gap-8 p-10 mt-4 items-center justify-center text-lg">
+        {/* info */}
+        <div className="flex flex-col items-start   w-[600px] text-[rgb(118,129,158)] p-10">
+          <span>
+            Hello! My name is{" "}
+            <span className="text-[rgb(95,241,208)]">Roshan Chaudhary</span> and
+            I am currently learning software development and how things work
+            around in the world of computer. I am proficient in frontend as well
+            as backend. My primary proficiency is in JavaScript.
+          </span>
+          {/* technologies I work with */}
+          <span className=" text-[rgb(95,241,208)] mt-3">
+            Here are some technologies i use recently:
+          </span>
+          <div className="grid grid-cols-2 gap-16 items-center  mt-3 ml-2 text-[rgb(118,129,158)]">
+            <ul className="flex flex-col items-start  justify-center  gap-2">
+              <li className="flex items-center justify-center gap-2">
+                <AiFillCaretRight color="rgb(95,241,208)" />
+                Javascript
+              </li>
+              <li className="flex items-center justify-center gap-2">
+                <AiFillCaretRight color="rgb(95,241,208)" />
+                Typescript
+              </li>
+              <li className="flex items-center justify-center gap-2">
+                <AiFillCaretRight color="rgb(95,241,208)" />
+                React
+              </li>
+              <li className="flex items-center justify-center gap-2">
+                <AiFillCaretRight color="rgb(95,241,208)" />
+                Next
+              </li>
+            </ul>
+            <ul className="flex flex-col items-start  justify-center ml-8 gap-2">
+              <li className="flex items-center justify-center gap-2">
+                <AiFillCaretRight color="rgb(95,241,208)" />
+                Node.js
+              </li>
+              <li className="flex items-center justify-center gap-2">
+                <AiFillCaretRight color="rgb(95,241,208)" />
+                Express
+              </li>
+              <li className="flex items-center justify-center gap-2">
+                <AiFillCaretRight color="rgb(95,241,208)" />
+                MySql
+              </li>
+              <li className="flex items-center justify-center gap-2">
+                <AiFillCaretRight color="rgb(95,241,208)" />
+                Mongodb
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <div className="grid grid-cols-2 gap-8 p-10 mt-4 items-center justify-center">
-      {/* info */}
-      <div className="flex flex-col items-center  w-[600px] text-[rgb(204,214,246)] p-10">
-        <span>
-        Hello! My name is Roshan Chaudhary and I am currently learning software 
-        development and how things work around in the world of computer. I am
-        proficient in frontend as well as backend. My proficiency is javascript.</span><br/>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text everI will try fix you. 
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five jejej
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release 
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
+        {/* photo */}
+        <div className="ml-10">
+          <Image alt="profile" src={photo} width={350} height={350} className="rounded-full bg-cover"/>
+        </div>
       </div>
-
-      {/* photo */}
-      <div className="ml-10">
-        <Image alt="profile" src={photo} width={350} height={350} />
-      </div>
-    </div>
     </div>
   );
 };
