@@ -1,8 +1,12 @@
 "use client"
 
+import {  useState } from "react";
 import {cn} from "../lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SunMoon } from 'lucide-react';
+import { useThemeStore } from "../store/useThemeStore";
+
 
 interface MainNavProps{
     label: string[];
@@ -11,6 +15,8 @@ interface MainNavProps{
 const MainNav: React.FC<MainNavProps>=({
     label
 })=>{
+    const { theme, toggleTheme } = useThemeStore();
+
     const pathname= usePathname()
 
     const routes= label.map((route)=>({
@@ -27,13 +33,14 @@ const MainNav: React.FC<MainNavProps>=({
                 key={route.label}
                 href={`/${route.label}`}
                     className={cn(
-                        "text-base font-medium  transition-colors hover:text-neutral-400"
+                        "text-base font-medium  transition-colors hover:text-neutral-400 cursor-pointer"
                     )}
                 >
                     {route.label}
                 </Link>
             ))
         }
+        <SunMoon onClick={toggleTheme}  className={`cursor-pointer transition-colors hover:text-neutral-400 `}/>
     </nav>
     )
 }
