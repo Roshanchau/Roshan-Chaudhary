@@ -25,6 +25,11 @@
     margin: 0;
     padding: 0;
 }
+
+html.white-bg {
+  background: white !important;
+  color: rgb(115 115 115) !important;
+}
   
   .text-gradient {
     background: radial-gradient(

@@ -1,6 +1,6 @@
 "use client"
 
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import {cn} from "../lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,13 +15,32 @@ interface MainNavProps{
 const MainNav: React.FC<MainNavProps>=({
     label
 })=>{
-    const { theme, toggleTheme } = useThemeStore();
+    const { theme , toggleTheme } = useThemeStore();
 
     const pathname= usePathname()
 
     const routes= label.map((route)=>({
         label: route
     }))
+
+    useEffect(()=>{
+        if(theme === 'light'){
+        document.documentElement.classList.add('white-bg');
+        }else{
+        document.documentElement.classList.remove('white-bg');
+        }
+    },[theme])
+
+    const handleToggle = () => {
+        console.log('toggle clicked');
+        // setToggle(!toggle);
+        if(theme === 'light'){
+        document.documentElement.classList.add('white-bg');
+        }else{
+        document.documentElement.classList.remove('white-bg');
+        }
+        toggleTheme();
+    };
 
     return (
         <nav
@@ -40,7 +59,7 @@ const MainNav: React.FC<MainNavProps>=({
                 </Link>
             ))
         }
-        <SunMoon onClick={toggleTheme}  className={`cursor-pointer transition-colors hover:text-neutral-400 `}/>
+        <SunMoon onClick={handleToggle}  className={`cursor-pointer transition-colors hover:text-neutral-400 `}/>
     </nav>
     )
 }

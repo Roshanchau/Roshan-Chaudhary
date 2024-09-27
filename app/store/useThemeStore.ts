@@ -9,10 +9,11 @@ interface ThemeState {
   toggleTheme: () => void;
 }
 
+
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set) => ({
-      theme: 'light', // default theme
+      theme: 'dark', // default theme
       setTheme: (newTheme: 'light' | 'dark') => set({ theme: newTheme }),
       toggleTheme: () =>
         set((state) => ({
