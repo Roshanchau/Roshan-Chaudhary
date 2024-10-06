@@ -18,7 +18,7 @@ const Navbar = async () => {
           <MainNav label={ ['About' , 'Projects'  ]} />
         </div>
       </Container>
-    </div>
+    </div>  
   );
 };
 
