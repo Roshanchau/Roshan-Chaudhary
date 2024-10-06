@@ -9,12 +9,14 @@ const ProjectCard: React.FC<project> = ({ url, title, description, live }) => {
   const [isClient, setIsClient] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  console.log(theme)
+
   useEffect(() => {
     setIsClient(true);
   }, []);
 
   if (!isClient) {
-    return null; // Render nothing on the server
+    return null; 
   }
 
   const handleMouseEnter = () => {
@@ -26,19 +28,15 @@ const ProjectCard: React.FC<project> = ({ url, title, description, live }) => {
   const handleMouseLeave = () => {
     if (videoRef.current) {
       videoRef.current.pause();
-      videoRef.current.currentTime = 0; // Reset the video to the beginning
     }
   };
 
   return (
     <div
-      className={`cursor-pointer group relative flex flex-col my-6 ${
-        theme === "dark" ? "bg-[rgb(31,31,36)]" : ""
-      } bg-white shadow-sm border ${
-        theme === "dark" ? "border-neutral-800" : ""
-      }
+      className={`cursor-pointer group relative flex flex-col my-6 ${theme === "dark" ? "bg-[rgb(32,32,39)]" : "bg-white"}  shadow-sm border 
+      ${ theme === "dark" ? "border-neutral-800" : "border-slate-200"}
       ${theme === "dark" ? "hover:shadow-gray-500" : "hover:shadow-lg"}
- border-slate-200 rounded-lg w-83
+  rounded-lg w-83
   transition-shadow duration-300`}
     >
       <div 
@@ -46,23 +44,19 @@ const ProjectCard: React.FC<project> = ({ url, title, description, live }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       >
-        <video ref={videoRef} className="h-full w-full rounded-lg" controls >
+        <video ref={videoRef} className="h-full w-full rounded-lg" controls muted>
           <source src={url} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       <div className="p-4">
         <h6
-          className={`mb-2 text-neutral-800 text-xl font-semibold ${
-            theme === "dark" ? "text-[rgb(185,232,221)]" : ""
-          }`}
+          className={`mb-2  text-xl font-semibold ${theme === "dark" ? "text-[rgb(187,232,222)]" : "text-neutral-800"}`}
         >
           {title}
         </h6>
         <p
-          className={`text-neutral-400 leading-normal font-light ${
-            theme === "dark" ? "text-[rgb(118,129,158)]" : ""
-          }`}
+          className={` leading-normal font-light ${theme === "dark" ? "text-[rgb(118,129,158)]" : "text-neutral-400"}`}
         >
           {description}
         </p>

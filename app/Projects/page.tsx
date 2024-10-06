@@ -20,11 +20,11 @@ const Projects = () => {
   `}
     >
       <ProjectCard title="SpeakPix" description="hello" url="../../autism.mp4" live="hehe" />
-      {/* <ProjectCard title="SpeakPix" description="hello" url="ab" live="hehe" /> */}
+      <ProjectCard title="SpeakPix" description="hello" url="../../movie.mp4" live="hehe" />
       {/* <ProjectCard title="SpeakPix" description="hello" url="ab" live="hehe" />
       <ProjectCard title="SpeakPix" description="hello" url="ab" live="hehe" />
-      <ProjectCard title="SpeakPix" description="hello" url="ab" live="hehe" /> */}
-      {/* <ProjectCard title="SpeakPix" description="hello" url="ab" live="hehe" /> */}
+      <ProjectCard title="SpeakPix" description="hello" url="ab" live="hehe" />
+       <ProjectCard title="SpeakPix" description="hello" url="ab" live="hehe" /> */}
 
     </div>
   );
