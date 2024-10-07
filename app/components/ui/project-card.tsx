@@ -31,12 +31,17 @@ const ProjectCard: React.FC<project> = ({ url, title, description, live }) => {
     }
   };
 
+  const handleButtonClick = () => {
+    const formattedUrl = live.startsWith('http') ? live : `https://${live}`;
+    window.open(formattedUrl, '_blank');
+  };
+
   return (
     <div
       className={`cursor-pointer group relative flex flex-col my-6 ${theme === "dark" ? "bg-[rgb(32,32,39)]" : "bg-white"}  shadow-sm border 
       ${ theme === "dark" ? "border-neutral-800" : "border-slate-200"}
       ${theme === "dark" ? "hover:shadow-gray-500" : "hover:shadow-lg"}
-  rounded-lg w-83
+  rounded-lg w-83 h-auto
   transition-shadow duration-300`}
     >
       <div 
@@ -63,13 +68,14 @@ const ProjectCard: React.FC<project> = ({ url, title, description, live }) => {
       </div>
       <div className="px-4 pb-4 pt-0 mt-2">
         <button
-          className={`rounded-md bg-[rgb(185,232,221)] py-2 px-4 border border-transparent text-center text-sm  
-           text-neutral-600 transition-all shadow-md hover:shadow-lg 
+        onClick={handleButtonClick}
+          className={`rounded-md bg-[rgb(185,232,221)] py-2 px-4 border border-transparent text-center text-sm  w-20
+           text-neutral-600 transition-all shadow-md hover:shadow-lg
             hover:text-neutral-200
         focus:bg-neutral-500 focus:shadow-none active:bg-neutral-500 hover:bg-neutral-500 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           type="button`}
         >
-          Read article
+          Link
         </button>
       </div>
     </div>
