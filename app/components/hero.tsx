@@ -19,8 +19,8 @@ const Hero = () => {
       </div>
         {/* description */}
         <p className={`mt-6 w-[500px] text-[rgb(118,129,158)] text-base font-medium ${theme==="light"? "text-neutral-400": ""}`}>
-          I'm a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I'm focused on
+          I&apos;m a software engineer specializing in building (and occasionally
+          designing) exceptional digital experiences. Currently, I&apos;m focused on
           building accessible, human-centered products.
         </p>
 
