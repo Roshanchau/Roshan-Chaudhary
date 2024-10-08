@@ -25,8 +25,8 @@ const Projects = () => {
     >
       <ProjectCard
         title="SpeakPix"
-        description="Developed a interactive mobile application for people with autism , dyslexia and learning issues to help them in social interaction and communication.
-         Used React Native as a cross-platform application in mobile as well , flask for backend , NLP for next word prediction with respective image increasing the efficiency of communication."
+        description="Developed a interactive mobile application for people with autism , dyslexia and learning issues to help them in social interaction and communication through image to text and text to audio.
+         Used React Native as a cross-platform application in mobile as well , flask for backend , NLP for next word prediction with respective image for each word, increasing the efficiency of communication."
         url="../../autism.mp4"
         live="hehe"
       />
