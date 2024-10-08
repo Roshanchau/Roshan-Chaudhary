@@ -38,11 +38,6 @@ const Projects = () => {
           url=""
           live="github.com/Roshanchau/momo.coders_iicquest"
         />
-        <ProjectCard 
-        title="AccountBook" 
-        description="Built an account keeper app to track customer expenses for shops and hotels using the MERN stack (MongoDB, Express.js, React, Node.js).
-         Implemented features for efficient expense management and data storage."
-         url="ab" live="github.com/Roshanchau/AccountBook" />
       <ProjectCard
         title="Moviflix"
         description="Developed an interactive movie ticket booking application using React, Tailwind CSS, and Redux.
@@ -55,7 +50,12 @@ const Projects = () => {
       title="Neatflix" 
       description="Developed a Netflix clone using Next.js, NEXTAuth for authentication, Prisma Schema for data modeling, MongoDB as the database, and Tailwind CSS for responsive styling. Implemented Google OAuth and GitHub authentication.
        Gained hands-on experience with Next.js routing and API integration, along with database management using Prisma Schema."
-       url="ab" live="github.com/Roshanchau/neatflix-app" />
+       url="../../netflix.mp4" live="github.com/Roshanchau/neatflix-app" />
+  <ProjectCard 
+  title="AccountBook" 
+  description="Built an account keeper app to track customer expenses for shops and hotels using the MERN stack (MongoDB, Express.js, React, Node.js).
+   Implemented features for efficient expense management and data storage."
+   url="../../accountBook.mp4" live="github.com/Roshanchau/AccountBook" />
     </div>
   );
 };
