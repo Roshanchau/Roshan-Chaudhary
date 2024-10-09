@@ -19,6 +19,7 @@ const About = () => {
             I am currently learning software development and how things work
             around in the world of computer. I am proficient in frontend as well
             as backend. My primary proficiency is in Javascript.
+            You can reach me at <span className={` ${theme==="light"? "text-[rgba(53,176,148,0.59)]": "text-neutral-400"}`}>roshanchau001@gmail.com</span>
           </span>
           {/* technologies I work with */}
             <span className={` text-[rgb(95,241,208)] mt-3 ${theme==="light"? "text-[rgba(53,176,148,0.59)]": ""}`}>
