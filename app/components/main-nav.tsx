@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SunMoon } from "lucide-react";
+import { SunMoon , Download } from "lucide-react";
 import { useThemeStore } from "../store/useThemeStore";
 
 interface MainNavProps {
@@ -60,11 +60,20 @@ const MainNav: React.FC<MainNavProps> = ({ label }) => {
       >
         Blogs
       </Link>
-      <SunMoon
-        onClick={handleToggle}
-        className={`cursor-pointer transition-colors hover:text-neutral-400 `}
-      />
-    </nav>
+      <a
+        href="../roshan_new_cv.pdf"
+        className={cn(
+          "text-base font-medium flex flex-row gap-1 transition-colors hover:text-neutral-400 cursor-pointer"
+        )}
+        download
+      >
+        Download CV <Download />
+      </a>
+        <SunMoon
+          onClick={handleToggle}
+          className={`cursor-pointer transition-colors hover:text-neutral-400 `}
+        />
+    </nav>  
   );
 };
 
