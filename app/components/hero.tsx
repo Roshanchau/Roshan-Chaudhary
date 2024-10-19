@@ -6,7 +6,7 @@ const Hero = () => {
   const { theme } = useThemeStore(); 
   console.log("this is theme hai",theme);   
   return (
-    <div className="flex-col items-center justify-center text-left p-10">
+    <div className="flex-col items-center justify-center lg:text-left sm:text-center p-10">
       <div className="leading-[60px]">
         <h2 className={`font-normal text-xl text-[rgb(95,241,208)] mb-4 ${theme==="light"? "text-[rgba(53,176,148,0.59)]": ""}`}>
           Hi, my name is

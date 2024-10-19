@@ -40,7 +40,7 @@ const MainNav: React.FC<MainNavProps> = ({ label }) => {
   };
 
   return (
-    <nav className="mx-8 flex items-center space-x-4 lg:space-x-12">
+    <nav className="mx-8 lg:flex items-center space-x-4 lg:space-x-12 hidden md:flex">
       {routes.map((route) => (
         <Link
           key={route.label}

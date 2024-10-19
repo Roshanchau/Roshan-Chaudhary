@@ -18,7 +18,7 @@ const About = () => {
             <span className={`text-[rgb(95,241,208)] font-medium ${theme==="light"? "text-[rgba(53,176,148,0.59)]": ""}`}>Roshan Chaudhary</span> and
             I am currently learning software development and how things work
             around in the world of computer. I am proficient in frontend as well
-            as backend. My primary proficiency is in Javascript.
+            as backend with 1.5 yrs of experience. My primary proficiency is in Javascript.
             You can reach me at <span className={` ${theme==="light"? "text-[rgba(53,176,148,0.59)]": "text-neutral-400"}`}>roshanchau001@gmail.com</span>
           </span>
           {/* technologies I work with */}
